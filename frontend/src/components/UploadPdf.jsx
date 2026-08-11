@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import api from "../api";
 
 
@@ -20,7 +20,7 @@ try {
 const res = await api.post("/upload", formData);
 onUploaded(res.data.fileId);
 alert("Uploaded successfully");
-} catch (e) {
+} catch {
 alert("Upload failed");
 }
 setLoading(false);

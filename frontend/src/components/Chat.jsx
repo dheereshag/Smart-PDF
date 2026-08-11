@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import api from "../api";
 
 
@@ -11,7 +11,7 @@ const ask = async () => {
 try {
 const res = await api.post("/chat", { fileId, question });
 setAnswer(res.data.answer || "No response");
-} catch (e) {
+} catch {
 setAnswer("Chat API failed (mock backend expected)");
 }
 };
